@@ -1,4 +1,4 @@
-import discord  # discord.py module
+import discord
 import random
 import time
 
@@ -7,7 +7,7 @@ class MyClient(discord.Client):
     async def on_ready(self):
         print('Logged on as {0}!'.format(self.user))
 
-    async def on_message(self, message):  # When a message is sent
+    async def on_message(self, message):
         channel = message.channel.name
         restricted_channels = ["bot-của-nam", "command-bot"]  # List of restricted channels
 
@@ -15,7 +15,7 @@ class MyClient(discord.Client):
         # If the message starts with the prefix
         if message.content.startswith(prefix):
             if channel in restricted_channels:  # If the message was sent in a restricted channel
-                command = message.content[len(prefix):]  # Get the command
+                command = message.content[len(prefix):]  
                 if command == "hello":
                     await message.reply("Hello there!")
             if channel not in restricted_channels:
