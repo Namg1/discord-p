@@ -1,6 +1,5 @@
 import discord
 import random
-import time
 
 
 class MyClient(discord.Client):
