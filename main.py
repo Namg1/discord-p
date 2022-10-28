@@ -8,7 +8,7 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         channel = message.channel.name
-        restricted_channels = ["bot-của-nam", "command-bot"]  # List of restricted channels
+        restricted_channels = ["command-bot"]  # List of restricted channels
 
         prefix = "-"  # Replace with your prefix
         # If the message starts with the prefix
