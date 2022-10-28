@@ -10,8 +10,7 @@ class MyClient(discord.Client):
         channel = message.channel.name
         restricted_channels = ["command-bot"]  # List of restricted channels
 
-        prefix = "-"  # Replace with your prefix
-        # If the message starts with the prefix
+        prefix = "-"
         if message.content.startswith(prefix):
             if channel in restricted_channels:  # If the message was sent in a restricted channel
                 command = message.content[len(prefix):]  
